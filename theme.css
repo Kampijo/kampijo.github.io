@@ -6,11 +6,11 @@ html body {
 
 .about > p {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 17px;
-    padding-left: 200px;
-    padding-top: 20px;
+    font-size: 18px;
+    padding-top: 35px;
 
 }
+
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
     background-color: transparent;
