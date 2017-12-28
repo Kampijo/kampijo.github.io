@@ -32,6 +32,15 @@ a {
 }
 
 .fa {
-	padding-top: 25px;
+	padding-top: 10px;
 	padding-right: 15px;
+}
+
+#biography {
+	position: absolute;
+}
+
+#occupation {
+	padding-top: 50px;
+	position: relative;
 }
