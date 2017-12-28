@@ -37,10 +37,11 @@ a {
 }
 
 #biography {
+	padding-right: 10px;
 	position: absolute;
 }
 
 #occupation {
-	padding-top: 50px;
+	padding-top: 80px;
 	position: relative;
 }
