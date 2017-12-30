@@ -21,7 +21,9 @@ $(function() {
         counter = 0;
     }   
     var quote = quotes[counter++];
-    $("#quote").html(quote);
-    $("#quote").hide().fadeIn(1000);
-    }, 3000);
+    $("#quote").fadeOut("slow", function() {
+         $("#quote").html(quote);
+    });
+    $("#quote").fadeIn("slow");
+    }, 4000);
 });
