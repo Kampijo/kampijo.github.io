@@ -41,6 +41,10 @@ a {
 	position: absolute;
 }
 
+.hidden {
+	display: none
+}
+
 #occupation {
 	padding-top: 50px;
 	position: relative;
