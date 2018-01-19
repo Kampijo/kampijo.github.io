@@ -13,10 +13,10 @@ var quotes = [
     "contemplating my soul-crushing student debt."
 ];
 
-var counter = 0;    
+var counter = 0; 
+var timerRef;
 
-$(function() {
-    setInterval(function(){ 
+function cycleQuotes() {
     if (counter >= quotes.length) {
         counter = 0;
     }   
@@ -25,5 +25,9 @@ $(function() {
          $("#quote").html(quote);
     });
     $("#quote").fadeIn("slow");
-    }, 4000);
+}
+
+$(function() {
+    clearInterval(timerRef);
+    timerRef = setInterval(cycleQuotes, 5000);
 });
