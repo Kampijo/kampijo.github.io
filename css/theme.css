@@ -3,7 +3,7 @@
 }
 
 html body {
-  padding-top: 15%;
+  padding-top: 5%;
   padding-bottom: 10%;    
   background-color: #fdfdfd; 
 }
@@ -34,6 +34,15 @@ a {
 
 .projects-header {
     padding-top: 60px;
+}
+
+.profile {
+    width: 25%;
+    height: 25%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
 }
 
 .links > a {
