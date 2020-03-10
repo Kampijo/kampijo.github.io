@@ -1,5 +1,6 @@
 var quotes = [
     "improvising recipes from stuff in my fridge.",
+    "browsing Google Flights.",
     "lurking various sneaker and fashion forums.",
     "binging TV shows and movies on Netflix.",
     "curating my Spotify playlists and discovering new tracks.",
@@ -8,9 +9,7 @@ var quotes = [
     "wasting money to feed my materialistic needs.",
     "browsing Reddit.",
     "staring at my ceiling.",
-    "staying up until 4AM doing random stuff.",
-    "enveloped in a warm duvet, napping/sleeping.",
-    "contemplating my soul-crushing student debt."
+    "enveloped in a warm duvet, napping/sleeping."
 ];
 
 var counter = 0; 
