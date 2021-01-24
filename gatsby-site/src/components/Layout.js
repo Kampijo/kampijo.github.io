@@ -1,33 +1,23 @@
 import React from "react"
-
-import { rhythm, scale } from "../utils/typography"
+import { Link } from "gatsby"
 import LinksFooter from "./links-footer"
 
-const Layout = ({ title, children }) => {
+const Layout = ({ location, title, children }) => {
+  const rootPath = `${__PATH_PREFIX__}/`
+  const isRootPath = location.pathname === rootPath
   let header
-  header = (
-    <h1
-      style={{
-        ...scale(1.5),
-        marginBottom: rhythm(1.5),
-        marginTop: 0,
-      }}
-    >
-      {title}
-    </h1>
-  )
+
+  if (!isRootPath) {
+    header = (
+      <Link className="header-link-home" to="/">
+        {title}
+      </Link>
+    )
+  }
+
   return (
-    <div
-      style={{
-        marginLeft: `auto`,
-        marginRight: `auto`,
-        maxWidth: rhythm(24),
-        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-      }}
-    >
-      {title &&
-        <header>{header}</header>
-      }
+    <div className="global-wrapper" data-is-root-path={isRootPath}>
+      {header && <header className="global-header">{header}</header>}
       <main>{children}</main>
       <footer>
         <LinksFooter />

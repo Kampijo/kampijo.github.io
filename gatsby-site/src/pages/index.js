@@ -2,12 +2,13 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import '../App.css'
+import '../style.css'
 import ProfileImage from "../components/profile-image"
 
-const IndexPage = () => {
+const IndexPage = ({ data, location }) => {
+    const siteTitle = data.site.siteMetadata?.title || `Title`
     return (
-        <Layout>
+        <Layout location={location} title={siteTitle}>
             <SEO title="Home" />
             <div class="flex-container">
                 <div class="info-container">
@@ -26,3 +27,26 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      nodes {
+        excerpt
+        fields {
+          slug
+        }
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
+          description
+        }
+      }
+    }
+  }
+`
