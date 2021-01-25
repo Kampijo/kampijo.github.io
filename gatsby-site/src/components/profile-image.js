@@ -14,7 +14,7 @@ import Img from "gatsby-image"
  */
 
 const ProfileImage = () => {
-    const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query {
       avatar: file(relativePath: { regex: "/profile.jpg/" }) {
         childImageSharp {
@@ -26,16 +26,16 @@ const ProfileImage = () => {
     }
   `)
 
-    const styles = {
-        width: '200px',
-        height: '200px',
-        borderRadius: '50%',
-        display: 'block',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-    }
+  const styles = {
+    width: '200px',
+    height: '200px',
+    borderRadius: '50%',
+    display: 'block',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  }
 
-    return <Img fluid={data.avatar.childImageSharp.fluid} style={styles} />
+  return <Img fluid={data.avatar.childImageSharp.fluid} style={styles} />
 }
 
 export default ProfileImage

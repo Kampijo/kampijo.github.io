@@ -1,6 +1,6 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
-
+import { graphql } from "gatsby"
+import DefaultLink from "../components/default-link"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -44,16 +44,16 @@ const BlogPostTemplate = ({ data, location }) => {
         >
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
+              <DefaultLink to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
-              </Link>
+              </DefaultLink>
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
+              <DefaultLink to={next.fields.slug} rel="next">
                 {next.frontmatter.title} →
-              </Link>
+              </DefaultLink>
             )}
           </li>
         </ul>

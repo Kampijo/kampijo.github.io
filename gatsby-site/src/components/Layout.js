@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import DefaultLink from "./default-link"
 import LinksFooter from "./links-footer"
 
 const Layout = ({ location, title, children }) => {
@@ -9,9 +9,9 @@ const Layout = ({ location, title, children }) => {
 
   if (!isRootPath) {
     header = (
-      <Link className="header-link-home" to="/">
+      <DefaultLink className="header-link-home" to="/">
         {title}
-      </Link>
+      </DefaultLink>
     )
   }
 
