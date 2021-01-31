@@ -10,6 +10,7 @@
   --maxWidth-2xl: 42rem;
   --maxWidth-3xl: 48rem;
   --maxWidth-4xl: 56rem;
+  --maxWidth-5xl: 64rem;
   --maxWidth-full: "100%";
   --maxWidth-wrapper: var(--maxWidth-2xl);
   --spacing-px: "1px";
@@ -247,18 +248,27 @@ a:focus {
 
 /* Custom classes */
 
-.global-wrapper {
+.global-main {
+  margin: var(--spacing-0) auto;
+  max-width: var(--maxWidth-wrapper);
+  padding: 0 var(--spacing-6);
+}
+
+.global-main[data-is-world-map="true"] {
+  margin: var(--spacing-0) auto;
+  max-width: var(--maxWidth-5xl);
+}
+
+.global-main[data-is-root-path="true"] {
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);
   padding: var(--spacing-6) var(--spacing-6);
 }
 
-.global-wrapper[data-is-root-path="true"] .bio {
-  margin-bottom: var(--spacing-6);
-}
-
 .global-header {
-  margin-bottom: var(--spacing-6);
+  margin: var(--spacing-0) auto;
+  max-width: var(--maxWidth-wrapper);
+  padding: var(--spacing-6) var(--spacing-6);
 }
 
 .main-heading {
@@ -317,7 +327,8 @@ a:focus {
 
 .info-container {
   text-align: center;
-  flex-basis: 100%;
+  margin: 0 auto;
+  max-width: 28rem;
 }
 
 .links-container {
@@ -327,6 +338,11 @@ a:focus {
 
 .links-container a {
   margin: var(--spacing-1);
+}
+
+.world-map-container {
+  background-color: rgb(254, 254, 254);
+  border-radius: 16px;
 }
 
 .wave {

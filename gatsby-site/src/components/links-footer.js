@@ -4,7 +4,7 @@ import DefaultLink from "./default-link"
 const LinksFooter = () => {
   return (
     <div class="links-container">
-      <DefaultLink to={"/"}>Home</DefaultLink> | <DefaultLink to={"/blog"}>My Ramblings</DefaultLink>
+      <DefaultLink to={"/"}>Home</DefaultLink> | <DefaultLink to={"/places-ive-visited"}>Places I've Visited</DefaultLink> | <DefaultLink to={"/blog"}>My Ramblings</DefaultLink>
       <br />
       <br />
       <a href="https://github.com/Kampijo"><img src="https://img.shields.io/badge/-Kampijo-black?style=flat&logo=github&logoColor=white" /></a>

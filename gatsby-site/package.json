@@ -4,6 +4,7 @@
   "description": "Powered by Gatsby and Markdown",
   "version": "0.1.0",
   "dependencies": {
+    "d3-geo-projection": "^3.0.0",
     "gatsby": "^2.26.1",
     "gatsby-image": "^2.5.0",
     "gatsby-plugin-feed": "^2.7.0",
@@ -26,6 +27,8 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
+    "react-simple-maps": "^2.3.0",
+    "react-tooltip": "^4.2.13",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.75"
   },
